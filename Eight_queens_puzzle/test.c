@@ -57,8 +57,9 @@ void lock_block(int x, int y) {
     if (array_get(x, y) == NUL_BLOCK) {
         array_set(x, y, L0K_BLOCK);  
     } else { 
-        array_set(x, y, BAD_BLOCK);
-        data_error = 1;
+        //array_set(x, y, BAD_BLOCK);
+        printf("\nBad operation detected.\n");
+        exit(1);
     }
 }
 
