@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorONT_Authfail">#cc0000</color>
+    <color name="colorONT_OK">#000000</color>
+    <color name="color_writable_param">#449944</color>
+    <color name="color_inactive_param">#888888</color>
+</resources>

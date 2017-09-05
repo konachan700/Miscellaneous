@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Оракул</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="dummy">dummy string</string>
+    <string name="num1">1</string>
+    <string name="oktxt">OK</string>
+    <string name="num0">0</string>
+    <string name="deltxt">&lt;&lt;</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+    <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    <string name="num9">9</string>
+
+    <color name="dark_red">#330000</color>
+    <color name="true_red">#ff79bb</color>
+    <color name="black">#000000</color>
+
+    <string name="entpasstxt">Введите пароль</string>
+    <string name="title_activity_himeko_main">Оракул</string>
+    <string name="qstntxt">Твой вопрос:</string>
+    <string name="asktxt">Задать вопрос</string>
+    <string name="resettxt">Сброс</string>
+    <string name="logtxt">Несколько прошлых вопросов</string>
+    <color name="disp_color">#2d0021</color>
+
+</resources>

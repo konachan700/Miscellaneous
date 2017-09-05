@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Micro Launcher</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    
+    <string name="icon_saturation">Насыщенность иконок</string>
+    <string name="icon_contrast">Исправление контраста</string>
+    <string name="draw_bg_for_icons_t">Фон у иконок</string>
+    <string name="change_wp_t">Сменить обои</string>
+    <string name="change_char">Выбрать персонажа</string>
+    
+    <string name="cat_need_root">Необходим root</string>
+    <string name="usb_modem_onoff">Автостарт USB-модема</string>
+    <string name="usb_modem_notify">Конфликтует со встроеной опцией!</string>
+
+    <string-array name="usb_modem_titles">
+    	<item >Включен (на rmnet0)</item>
+    	<item >Отключен</item>
+    </string-array>
+    <string-array name="usb_modem_values">
+    	<item >OK</item>
+    	<item >NO</item>
+    </string-array>
+    
+    <string-array name="draw_bg_for_icons_titles">
+    	<item >Рисовать</item>
+    	<item >Нет</item>
+    </string-array>
+    <string-array name="draw_bg_for_icons_values">
+    	<item >OK</item>
+    	<item >NO</item>
+    </string-array>
+    
+    <string-array name="icon_contrast_titles">
+    	<item >Исправлять</item>
+    	<item >Не исправлять</item>
+    </string-array>
+    <string-array name="icon_contrast_values">
+    	<item >OK</item>
+    	<item >NO</item>
+    </string-array>
+
+    <string-array name="icon_saturation_titles">
+        <item >Черно-белые</item>
+        <item >10%</item>
+        <item >20%</item>
+        <item >30%</item>
+        <item >40%</item>
+        <item >50%</item>
+        <item >60%</item>
+        <item >70%</item>
+        <item >80%</item>
+        <item >90%</item>
+        <item >Ориг.цвета</item>opt_draw_bg_for_icons
+    </string-array>
+    <string-array name="icon_saturation_values">
+        <item >0</item>
+        <item >10</item>
+        <item >20</item>
+        <item >30</item>
+        <item >40</item>
+        <item >50</item>
+        <item >60</item>
+        <item >70</item>
+        <item >80</item>
+        <item >90</item>
+        <item >99</item>
+    </string-array>
+</resources>

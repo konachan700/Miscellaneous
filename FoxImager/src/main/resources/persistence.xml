@@ -1,0 +1,8 @@
+<persistence>
+    <persistence-unit name="manager1" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.ejb.cfgfile" value="/hibernate.cfg.xml"/>
+        </properties>
+    </persistence-unit>
+</persistence>

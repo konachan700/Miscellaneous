@@ -1,0 +1,5 @@
+#! /bin/bash
+###################
+touch .stamp_configured
+exit 0
+

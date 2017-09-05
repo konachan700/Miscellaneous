@@ -1,0 +1,63 @@
+    
+    
+    
+//    public void AddItem(xListElementContainer element, String ID, String GID) {
+//        ListElements.put(ID, element);
+//    }
+//    
+//    public void AddItem(Component c, String ID) {
+//        xListElementContainer element = new xListElementContainer();
+//        ListElements.put(ID, element);
+//    }
+//    
+//    public void AddItem(Component c, String ID, Color labelColor, Color bgColor, String tags) {
+//        xListElementContainer element = new xListElementContainer();
+//        element.SetBGColor(bgColor);
+//        element.SetLabelColor(labelColor); 
+//        ListElements.put(ID, element);
+//        ListTags.put(ID, tags);
+//    }
+//    
+//    
+//    public void AddTags(String ID, String tags) {
+//        if (tags == null) throw new NullPointerException("Cannot add null tags!");
+//        xListElementContainer x = ListElements.get(ID);
+//        if (x == null) throw new NullPointerException("Cannot add tags for unknown element!");
+//        ListTags.put(ID, tags);
+//    }
+//    
+//    public xListElementContainer GetElement(String ID) {
+//        return ListElements.get(ID);
+//    }
+//    
+//    public void StartSearch(String searchString) {
+//        final String ss = searchString.trim().toLowerCase();
+//        Set<String> xs = ListTags.keySet();
+//        xs.stream().forEach((s) -> {
+//            String a = ((String)(ListTags.get(s))).trim().toLowerCase();
+//            ListElements.get(s).setVisible(a.contains(ss));
+//        });
+//    }
+//    
+//    public void StopSearch() {
+//        Set<String> xs = ListElements.keySet();
+//        xs.stream().forEach((a) -> {
+//            ListElements.get(a).setVisible(true);
+//        });
+//    }
+//    
+//    public Set<String> GetElementsID() {
+//        return ListElements.keySet();
+//    }
+//    
+//    public String GetTags(String ID) {
+//        return ListTags.get(ID);
+//    }
+    
+    public void Clear() {
+        jPanel2.removeAll();
+        ListElements.clear();
+        ListTags.clear();
+        jPanel2.revalidate();
+        jPanel2.repaint();
+    }

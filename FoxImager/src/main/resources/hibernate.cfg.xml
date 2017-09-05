@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class-cache PUBLIC '-//Hibernate/Hibernate Configuration DTD 3.0//EN' 'null'>
+<hibernate-configuration>
+<session-factory/>
+</hibernate-configuration>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    	<ListPreference android:key="opt_icon_saturation" android:defaultValue="20" android:title="@string/icon_saturation" android:entryValues="@array/icon_saturation_values" android:entries="@array/icon_saturation_titles"/>
+    	<ListPreference android:entryValues="@array/icon_contrast_values" android:enabled="true" android:entries="@array/icon_contrast_titles" android:key="opt_change_icon_contrast" android:defaultValue="OK" android:title="@string/icon_contrast"/>
+    	<ListPreference android:key="opt_draw_bg_for_icons" android:entryValues="@array/draw_bg_for_icons_values" android:entries="@array/draw_bg_for_icons_titles" android:title="@string/draw_bg_for_icons_t"/>
+    	<Preference android:key="change_wallpapers" android:title="@string/change_wp_t"/>
+    	<ListPreference android:title="@string/change_char" android:defaultValue="builtin" android:enabled="true" android:key="change_char_list"/>
+    	
+</PreferenceScreen>

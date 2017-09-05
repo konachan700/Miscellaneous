@@ -1,0 +1,68 @@
+u32 mew_i2c_read(u8 da, u8 ra) {
+    u32 reg, result, timer;
+    
+    timer = 0;
+    while ((I2C_SR2(I2C1) & I2C_SR2_BUSY)) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1001;
+    }
+    
+    i2c_send_start(I2C1);
+    
+    timer = 0; 
+    while (!((I2C_SR1(I2C1) & I2C_SR1_SB) & (I2C_SR2(I2C1) & (I2C_SR2_MSL | I2C_SR2_BUSY)))) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1002;
+    }
+    
+    i2c_send_7bit_address(I2C1, da, I2C_WRITE);
+    
+    timer = 0;
+    while (!(I2C_SR1(I2C1) & I2C_SR1_ADDR)) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1003;
+    }
+    
+    reg = I2C_SR2(I2C1);
+    (void) reg;
+    i2c_send_data(I2C1, ra);
+    
+    timer = 0;
+    while (!(I2C_SR1(I2C1) & (I2C_SR1_BTF))) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1004;
+    }
+    
+    i2c_send_start(I2C1);
+    
+    timer = 0;
+    while (!((I2C_SR1(I2C1) & I2C_SR1_SB) & (I2C_SR2(I2C1) & (I2C_SR2_MSL | I2C_SR2_BUSY)))) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1005;
+    }
+    
+    i2c_send_7bit_address(I2C1, da, I2C_READ);
+    
+    timer = 0;
+    while (!(I2C_SR1(I2C1) & I2C_SR1_ADDR)) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1006;
+    }
+    
+    i2c_disable_ack(I2C1);
+    reg = I2C_SR2(I2C1);
+    (void) reg;
+    i2c_send_stop(I2C1);
+    
+    timer = 0;
+    while (!(I2C_SR1(I2C1) & I2C_SR1_RxNE)) { 
+        timer++;
+        if (timer > I2C_TIMEOUT) return 0x1007;
+    }
+    
+    result = i2c_get_data(I2C1);
+	i2c_enable_ack(I2C1);
+	I2C_SR1(I2C1) &= ~I2C_SR1_AF;
+    
+	return result;
+}

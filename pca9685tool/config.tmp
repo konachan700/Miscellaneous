@@ -1,0 +1,95 @@
+
+12 310i 470max 210min
+0 250min 500max 430i
+1 160min 500max 300i
+ 
+3 400i 510max 230min
+
+1 520max 
+\
+
+
+
+DeviceID: 0;     device address: 0x40;  channel:0xF;    min: 370;       max: 500;       inital: 430
+DeviceID: 1;     device address: 0x40;  channel:0xE;    min: 300;       max: 460;       inital: 360
+DeviceID: 2;     device address: 0x40;  channel:0xD;    min: 280;       max: 450;       inital: 390
+DeviceID: 3;     device address: 0x40;  channel:0xC;    min: 210;       max: 470;       inital: 390
+DeviceID: 4;     device address: 0x40;  channel:0x0;    min: 250;       max: 500;       inital: 430
+DeviceID: 5;     device address: 0x40;  channel:0x3;    min: 230;       max: 510;       inital: 400
+DeviceID: 6;     device address: 0x40;  channel:0x1;    min: 160;       max: 520;       inital: 310
+DeviceID: 7;     device address: 0x41;  channel:0x0;    min: 170;       max: 490;       inital: 300
+DeviceID: 8;     device address: 0x41;  channel:0x1;    min: 200;       max: 480;       inital: 390
+DeviceID: 9;     device address: 0x41;  channel:0x2;    min: 300;       max: 470;       inital: 370
+DeviceID: 10;    device address: 0x41;  channel:0x3;    min: 200;       max: 450;       inital: 270
+DeviceID: 11;    device address: 0x41;  channel:0x4;    min: 230;       max: 420;       inital: 290
+DeviceID: 12;    device address: 0x41;  channel:0x5;    min: 200;       max: 360;       inital: 330
+DeviceID: 13;    device address: 0x41;  channel:0x6;    min: 180;       max: 440;       inital: 330
+DeviceID: 14;    device address: 0x43;  channel:0x0;    min: 220;       max: 470;       inital: 390
+DeviceID: 15;    device address: 0x43;  channel:0x1;    min: 170;       max: 450;       inital: 350
+DeviceID: 16;    device address: 0x43;  channel:0x2;    min: 150;       max: 410;       inital: 310
+DeviceID: 17;    device address: 0x43;  channel:0x3;    min: 120;       max: 420;       inital: 210
+DeviceID: 18;    device address: 0x43;  channel:0x4;    min: 150;       max: 430;       inital: 300
+DeviceID: 19;    device address: 0x43;  channel:0x5;    min: 120;       max: 460;       inital: 270
+DeviceID: 20;    device address: 0x43;  channel:0x6;    min: 240;       max: 440;       inital: 280
+DeviceID: 21;    device address: 0x43;  channel:0x7;    min: 200;       max: 510;       inital: 340
+DeviceID: 22;    device address: 0x43;  channel:0x8;    min: 180;       max: 520;       inital: 320
+DeviceID: 23;    device address: 0x43;  channel:0x9;    min: 230;       max: 360;       inital: 310
+DeviceID: 24;    device address: 0x43;  channel:0xA;    min: 290;       max: 510;       inital: 440
+DeviceID: 25;    device address: 0x43;  channel:0xB;    min: 170;       max: 500;       inital: 320
+DeviceID: 26;    device address: 0x43;  channel:0xC;    min: 150;       max: 300;       inital: 220
+DeviceID: 27;    device address: 0x43;  channel:0xD;    min: 260;       max: 490;       inital: 340
+
+
+
+0 220min 470max 390i
+1 170min 450max 350i
+2 150min 410max 310i
+3 120min 420max 210i
+4 150min 430max 
+5 120min 460max 270i
+6 280i 240min 440max 
+7 340i 200min 510max
+8 520max 180min 320i
+9 310i 230min 360max
+10 510max 290min 440i
+11 320i 170min 500max
+12 220i 150min 300max
+13 260min 340i 490max
+
+
+
+******** leg0 ****************
+DeviceID: 0;     device address: 0x40;  channel:0xF;    min: 370;       max: 500;       inital: 430
+DeviceID: 1;     device address: 0x40;  channel:0xE;    min: 300;       max: 460;       inital: 360
+DeviceID: 2;     device address: 0x40;  channel:0xD;    min: 280;       max: 450;       inital: 390
+DeviceID: 3;     device address: 0x40;  channel:0xC;    min: 210;       max: 470;       inital: 390
+DeviceID: 4;     device address: 0x40;  channel:0x0;    min: 250;       max: 500;       inital: 430
+DeviceID: 5;     device address: 0x40;  channel:0x3;    min: 230;       max: 510;       inital: 400
+DeviceID: 6;     device address: 0x40;  channel:0x1;    min: 160;       max: 520;       inital: 310
+
+
+
+0 300i 490max 170min
+1 390i 480max 200min
+2 470max 300min 370i
+3 200min 450max 270i
+4 420max 230min 290i
+5 190min 360max 330i
+6 330i 180min 440max
+
+
+DeviceID: 0;     device address: 0x40;  channel:0xF;    min: 370;       max: 500;       inital: 430
+DeviceID: 1;     device address: 0x40;  channel:0xE;    min: 300;       max: 460;       inital: 360
+DeviceID: 2;     device address: 0x40;  channel:0xD;    min: 280;       max: 450;       inital: 390
+DeviceID: 3;     device address: 0x40;  channel:0xC;    min: 210;       max: 470;       inital: 390
+DeviceID: 4;     device address: 0x40;  channel:0x0;    min: 250;       max: 500;       inital: 430
+DeviceID: 5;     device address: 0x40;  channel:0x3;    min: 230;       max: 510;       inital: 400
+DeviceID: 6;     device address: 0x40;  channel:0x1;    min: 160;       max: 520;       inital: 310
+DeviceID: 7;     device address: 0x41;  channel:0x0;    min: 170;       max: 490;       inital: 300
+DeviceID: 8;     device address: 0x41;  channel:0x1;    min: 200;       max: 480;       inital: 390
+DeviceID: 9;     device address: 0x41;  channel:0x2;    min: 300;       max: 470;       inital: 370
+DeviceID: 10;    device address: 0x41;  channel:0x3;    min: 200;       max: 450;       inital: 270
+DeviceID: 11;    device address: 0x41;  channel:0x4;    min: 230;       max: 420;       inital: 290
+DeviceID: 12;    device address: 0x41;  channel:0x5;    min: 200;       max: 360;       inital: 330
+DeviceID: 13;    device address: 0x41;  channel:0x6;    min: 180;       max: 440;       inital: 330
+Total struct size: 960;

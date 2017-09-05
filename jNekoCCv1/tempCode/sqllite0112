@@ -1,0 +1,75 @@
+    
+
+//    public static void CreateLastAddedONT(String ont, String slot) {
+//        if ((gStatement == null) || (gConnection == null)) return;
+//        if (slot.length() > 2) return;
+//        try {
+//            PreparedStatement ps = gConnection.prepareStatement("INSERT INTO 'ONT_LastAdded' VALUES(?, ?, ?);");
+//            ps.setLong(1, new Date().getTime()); 
+//            ps.setString(2, ont.toUpperCase().trim());
+//            ps.setString(3, slot.trim());
+//            ps.execute();
+//        } catch (SQLException ex) { }
+//    }
+    
+    
+    
+    
+//    public static String GetAdditionalInfo(String inStr, String caption) {
+//        final long hash = MD5Special(inStr.toUpperCase()+caption.toUpperCase());
+//        if ((gStatement == null) || (gConnection == null)) return null;
+//        
+//        try {
+//            PreparedStatement ps = gConnection.prepareStatement("SELECT * FROM 'AdditionalInfo' WHERE owner=?;");
+//            ps.setLong(1, hash); 
+//            ResultSet rs = ps.executeQuery();
+//            if (rs != null) {
+//                final String retval = rs.getString("value");
+//                if (gDEBUG) System.err.println("OK_: hash="+hash+"; capt="+caption+"; in="+inStr + "; err=NO");
+//                return retval;
+//            }
+//        } catch (SQLException ex) {
+//            if (gDEBUG) System.err.println("ERR: hash="+hash+"; capt="+caption+"; in="+inStr + "; err="+ex.getMessage()); 
+//            //if (gDEBUG) Logger.getLogger(Z_DBSQLite.class.getName()).log(Level.SEVERE, null, ex);
+//            return null;
+//        }
+//        return null;
+//    }
+//    
+//    public static int CreateAdditionalInfo(String inStr, String caption, String value) { // это место явно не улучшает производительность... но щито поделаешь.
+//        final long hash = MD5Special(inStr.toUpperCase()+caption.toUpperCase());
+//        if ((gStatement == null) || (gConnection == null)) return 2;
+//        try {
+//            PreparedStatement ps = gConnection.prepareStatement("INSERT INTO 'AdditionalInfo' VALUES(?, ?, ?);");
+//            ps.setLong(1, hash); 
+//            ps.setString(2, caption);
+//            ps.setString(3, value);
+//            ps.execute();
+//        } catch (SQLException ex) {
+//            try {
+//                PreparedStatement ps = gConnection.prepareStatement("UPDATE 'AdditionalInfo' SET value=? WHERE owner=?;");
+//                ps.setString(1, value);
+//                ps.setLong(2, hash);
+//                ps.execute();
+//            } catch (SQLException ex1) {
+//                if (gDEBUG) System.err.println("ERR: hash="+hash+"; capt="+caption+"; in="+inStr + "; err="+ex.getMessage()); 
+//                //Logger.getLogger(Z_DBSQLite.class.getName()).log(Level.SEVERE, null, ex1);
+//            }
+//            //if (gDEBUG) Logger.getLogger(Z_DBSQLite.class.getName()).log(Level.SEVERE, null, ex);
+//            return 1;
+//        }
+//        return 0;
+//    }
+    
+    
+    
+//    public static void intGetLastAddedONTsList(ExtListModel_PON base_model, ExtListModel_PON temporary_model) throws SQLException {
+//        ResultSet rs = sSQLite.gStatement.executeQuery("SELECT * FROM 'ONT_LastAdded' ORDER BY 'did' DESC;");
+//        if (rs == null) return;
+//        while (rs.next()) {
+//            base_model.AddItem(rs.getString("eltx"), "Slot: " + rs.getString("slot"), new Date(rs.getLong("did")).toString());
+//        }
+//        base_model.Commit();
+//        temporary_model = new ExtListModel_PON(base_model);
+//    }
+    

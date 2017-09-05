@@ -1,0 +1,11 @@
+[Unit]
+Description=Display daemon
+
+[Service]
+Type=simple
+PIDFile=/run/display.pid
+ExecStart=/usr/bin/dispaly-daemon
+
+[Install]
+WantedBy=multi-user.target
+

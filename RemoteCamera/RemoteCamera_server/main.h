@@ -1,0 +1,8 @@
+ 
+#define LISTEN_ADDR "0.0.0.0"
+#define LISTEN_PORT 2999
+#define DEFAULT_HEIGHT 480
+#define DEFAULT_WIDTH  640
+
+#define GETPARAM_SEND_HTTP_HEADERS "headers"
+#define GETPARAM_COLOR_IMAGE "color"

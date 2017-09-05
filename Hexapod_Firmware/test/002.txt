@@ -1,0 +1,282 @@
+
+void servo_delay_move(signed char val, unsigned long sleep, unsigned char servo_number) {
+	if (val == 0) return;
+	servo_select(servo_number);
+	unsigned char i=0;
+	unsigned char m=0;
+	if (val < 0) m = ~val + 1; else m = val;
+	
+	if      (servo_curr8 == 1) {
+		for (i=0; i<m; i++) { 
+			if ((servo_01 > (SERVO_CORR_01 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_01 < (SERVO_CORR_01 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_01--; else servo_01++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 2) {
+		for (i=0; i<m; i++) { 
+			if ((servo_02 > (SERVO_CORR_02 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_02 < (SERVO_CORR_02 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_02--; else servo_02++;
+			__servo__delay_ms(sleep);
+		}			
+	}
+	 else if (servo_curr8 == 3) {
+		for (i=0; i<m; i++) { 
+			if ((servo_03 > (SERVO_CORR_03 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_03 < (SERVO_CORR_03 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_03--; else servo_03++;
+			__servo__delay_ms(sleep);
+		}			
+	}
+	 else if (servo_curr8 == 4) {
+		for (i=0; i<m; i++) { 
+			if ((servo_04 > (SERVO_CORR_04 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_04 < (SERVO_CORR_04 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_04--; else servo_04++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 5) {
+		for (i=0; i<m; i++) { 
+			if ((servo_05 > (SERVO_CORR_05 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_05 < (SERVO_CORR_05 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_05--; else servo_05++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 6) {
+		for (i=0; i<m; i++) { 
+			if ((servo_06 > (SERVO_CORR_06 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_06 < (SERVO_CORR_06 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_06--; else servo_06++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 7) {
+		for (i=0; i<m; i++) { 
+			if ((servo_07 > (SERVO_CORR_07 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_07 < (SERVO_CORR_07 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_07--; else servo_07++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 8) {
+		for (i=0; i<m; i++) { 
+			if ((servo_08 > (SERVO_CORR_08 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_08 < (SERVO_CORR_08 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_08--; else servo_08++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 9) {
+		for (i=0; i<m; i++) { 
+			if ((servo_09 > (SERVO_CORR_09 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_09 < (SERVO_CORR_09 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_09--; else servo_09++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 10) {
+		for (i=0; i<m; i++) { 
+			if ((servo_10 > (SERVO_CORR_10 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_10 < (SERVO_CORR_10 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_10--; else servo_10++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 11) {
+		for (i=0; i<m; i++) { 
+			if ((servo_11 > (SERVO_CORR_11 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_11 < (SERVO_CORR_11 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_11--; else servo_11++;
+			__servo__delay_ms(sleep);
+		}			
+	} else if (servo_curr8 == 12) {
+		for (i=0; i<m; i++) { 
+			if ((servo_12 > (SERVO_CORR_12 + SERVO_MAX_MOVE)) && (val > 0)) return;
+			if ((servo_12 < (SERVO_CORR_12 - SERVO_MAX_MOVE)) && (val < 0)) return;
+			if (val < 0) servo_12--; else servo_12++;
+			__servo__delay_ms(sleep);
+		}			
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+	//} else if (servo_curr8 == 2) {
+		//for (i=0; i<val; i++) { 
+			//servo_02 = (SERVO_CORR_02 - SERVO_MAX_MOVE) - i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 3) {
+		//for (i=0; i<val; i++) { 
+			//servo_03 = (SERVO_CORR_03 - SERVO_MAX_MOVE) - i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 4) {
+		//for (i=0; i<val; i++) { 
+			//servo_04 = (SERVO_CORR_04 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 5) {
+		//for (i=0; i<val; i++) { 
+			//servo_05 = (SERVO_CORR_05 - SERVO_MAX_MOVE) - i;
+			//__servo__delay_ms(sleep);
+		//}  
+	//} else if (servo_curr8 == 6) {
+		//for (i=0; i<val; i++) { 
+			//servo_06 = (SERVO_CORR_06 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 7) {
+		//for (i=0; i<val; i++) { 
+			//servo_07 = (SERVO_CORR_07 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 8) {
+		//for (i=0; i<val; i++) { 
+			//servo_08 = (SERVO_CORR_08 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 9) {
+		//for (i=0; i<val; i++) { 
+			//servo_09 = (SERVO_CORR_09 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 10) {
+		//for (i=0; i<val; i++) { 
+			//servo_10 = (SERVO_CORR_10 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//} 
+	//} else if (servo_curr8 == 11) {
+		//for (i=0; i<val; i++) { 
+			//servo_11 = (SERVO_CORR_11 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//}
+	//} else if (servo_curr8 == 12) {
+		//for (i=0; i<val; i++) { 
+			//servo_12 = (SERVO_CORR_12 - SERVO_MAX_MOVE) + i;
+			//__servo__delay_ms(sleep);
+		//}
+	//}
+//
+		
+		//if (servo_cnt8_1 < servo_13) PORTF |= (1 << PINF0); else PORTF &= ~(1 << PINF0);
+		//if (servo_cnt8_1 < servo_14) PORTF |= (1 << PINF1); else PORTF &= ~(1 << PINF1);
+		//if (servo_cnt8_1 < servo_15) PORTF |= (1 << PINF2); else PORTF &= ~(1 << PINF2);
+		//if (servo_cnt8_1 < servo_16) PORTF |= (1 << PINF3); else PORTF &= ~(1 << PINF3);
+		//if (servo_cnt8_1 < servo_17) PORTF |= (1 << PINF4); else PORTF &= ~(1 << PINF4);
+		//if (servo_cnt8_1 < servo_18) PORTF |= (1 << PINF5); else PORTF &= ~(1 << PINF5);
+
+
+		
+		//if (servo_cnt8_1 < servo_01) PORTE |= (1 << PINE3); else PORTE &= ~(1 << PINE3);
+		//if (servo_cnt8_1 < servo_02) PORTB |= (1 << PINB7); else PORTB &= ~(1 << PINB7);
+		//if (servo_cnt8_1 < servo_03) PORTB |= (1 << PINB6); else PORTB &= ~(1 << PINB6);
+		//if (servo_cnt8_1 < servo_04) PORTB |= (1 << PINB5); else PORTB &= ~(1 << PINB5);
+		//if (servo_cnt8_1 < servo_05) PORTB |= (1 << PINB4); else PORTB &= ~(1 << PINB4);
+		
+		//if (servo_cnt8_1 < servo_06) PORTH |= (1 << PINH3); else PORTH &= ~(1 << PINH3);
+		//if (servo_cnt8_1 < servo_07) PORTH |= (1 << PINH4); else PORTH &= ~(1 << PINH4);
+		//if (servo_cnt8_1 < servo_08) PORTH |= (1 << PINH5); else PORTH &= ~(1 << PINH5);
+		//if (servo_cnt8_1 < servo_09) PORTH |= (1 << PINH6); else PORTH &= ~(1 << PINH6);
+		//if (servo_cnt8_1 < servo_10) PORTK |= (1 << PINK0); else PORTK &= ~(1 << PINK0);
+		//if (servo_cnt8_1 < servo_11) PORTK |= (1 << PINK1); else PORTK &= ~(1 << PINK1);
+		//if (servo_cnt8_1 < servo_12) PORTK |= (1 << PINK2); else PORTK &= ~(1 << PINK2);
+		
+				
+		//if (servo_cnt8_1 < servo_01) asm("SBI 0x0e,3"); else asm("CBI 0x0e,3");
+		
+		//ISR(TIMER2_COMPA_vect) {
+	//if (servo_cnt8_4 == 0) {
+		//asm volatile("PUSH R30");
+		//if (servo_cnt8_3 < servo_06) asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"SBR R30,0b00001000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//); else asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"CBR R30,0b00001000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//);
+	//
+		//if (servo_cnt8_3 < servo_07) asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"SBR R30,0b00010000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//); else asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"CBR R30,0b00010000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//);
+	//
+		//if (servo_cnt8_3 < servo_08) asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"SBR R30,0b00100000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//); else asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"CBR R30,0b00100000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//);
+	//
+		//if (servo_cnt8_3 < servo_09) asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"SBR R30,0b01000000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//); else asm volatile(
+			//"LDS R30,0x102"			"\n\t"
+			//"CBR R30,0b01000000"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//);
+//
+		//if (servo_cnt8_3 < servo_10) asm volatile(
+			//"LDS R30,0x108"			"\n\t"
+			//"SBR R30,0b00000001"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//); else asm volatile(
+			//"LDS R30,0x108"			"\n\t"
+			//"CBR R30,0b00000001"	"\n\t"
+			//"STS 0x102,R30"			"\n\t"
+		//);
+		//
+		//asm volatile("POP R30");
+	//}	
+//
+	//servo_cnt8_3++;
+	//if (servo_cnt8_3 >= 100) {
+		//servo_cnt8_3 = 0;
+		//servo_cnt8_4++;
+		//if (servo_cnt8_4 >= 10) {
+			//servo_cnt8_4 = 0;
+		//}
+	//}		
+	//TCNT2 = 0;
+//}
+
+	//TCCR2A = 0;
+	//TCCR2B = (1 << CS21) | (1 << CS20);
+	//TIMSK2 = (1 << OCIE2A);
+	//OCR2A  = 5;
+	
+	//(1 << PINF0) | (1 << PINF1) | (1 << PINF2) | (1 << PINF3) | (1 << PINF4) | (1 << PINF5);
+	//DDRK |= (1 << PINK0) | (1 << PINK1) | (1 << PINK2);
+		//DDRH |= (1 << PINH6) | (1 << PINH5) | (1 << PINH4) | (1 << PINH3);
+		
+		//volatile unsigned char servo_cnt8_3 = 0;
+//volatile unsigned char servo_cnt8_4 = 0;
+
+	//else if (servo_curr8 == 13) servo_13 = n;
+	//else if (servo_curr8 == 14) servo_14 = n;
+	//else if (servo_curr8 == 15) servo_15 = n;
+	//else if (servo_curr8 == 16) servo_16 = n;
+	//else if (servo_curr8 == 17) servo_17 = n;
+	//else if (servo_curr8 == 18) servo_18 = n;

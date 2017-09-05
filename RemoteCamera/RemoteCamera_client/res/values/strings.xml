@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Remote Camera Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="ip_label">Camera IP:Port</string>
+    <string name="default_ip">192.168.43.218:2999</string>
+    <string name="connect_button">Connect</string>
+    <string name="connToCamera">Save settings</string>
+    <string name="ip_addr">Camera IP</string>
+    <string name="ip1">192</string>
+    <string name="ip2">168</string>
+    <string name="ip3">43</string>
+    <string name="ip4">218</string>
+    <string name="camport">Camera port</string>
+    <string name="defport">2999</string>
+    <string name="returntomain">Return</string>
+    <string name="commline">Camera command line</string>
+    <string name="commline_content">/jpg/headers/</string>
+    <string name="svcport_def">2998</string>
+    <string name="svcport">Service port</string>
+    <string name="Start">Start</string>
+    <string name="options">Options</string>
+    <string name="noconnect">No camera found</string>
+    <string name="Stop">Stop</string>
+    <string name="tabMain">Main</string>
+    <string name="tabCamera">Camera</string>
+
+</resources>

@@ -1,0 +1,584 @@
+@font-face {
+	src: url("LinBiolinum_RBah.ttf");
+}
+
+@font-face {
+	src: url("LinBiolinum_Rah.ttf");
+}
+
+@font-face {
+	src: url("Share-Bold.ttf");
+}
+
+@font-face {
+	src: url("Share-Regular.ttf");
+}
+
+VBox, HBox, ScrollPane, Scene, Stage, Button,
+MewMenu, MewMenuGroup {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px 0 0 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+TopPanelButton, TopPanelMenuButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px 0 0 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+Label, 
+MewMenuItem {
+    -fx-font-size: 12px;
+    -fx-text-fill: #000;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;    
+    -fx-border-insets: 0;
+    -fx-pref-width: 9999px;
+    -fx-max-width: 9999px;
+    -fx-min-width: 1px;
+}
+
+TextField,
+NumericTextField {
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0px;
+    -fx-border-width: 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0 11px 0 11px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-font-weight:bold;
+    -fx-font-family: "Linux Biolinum Bold";
+    -fx-background-color: #444;
+}
+
+Paginator NumericTextField {
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+    -fx-min-width: 96px;
+    -fx-font-size: 12px;
+}
+
+Tooltip {
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 1px;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+    -fx-background-color: #FFF;
+    -fx-border-color: #000;
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-font-weight:bold;
+    -fx-font-family: "Linux Biolinum Bold";
+}
+
+.controlsBadInput {
+    -fx-text-fill: #F77;
+}
+
+.controlsGoodInput {
+    -fx-text-fill: #7F7;
+}
+
+.paginatorIcon {
+    -fx-fill: #fff;
+    -fx-icon-size: 16px;
+    -fx-pref-width: 24px;
+    -fx-max-width: 24px;
+    -fx-min-width: 24px;
+}
+
+.paginatorIcon:hover {
+    -fx-fill: #f77;
+}
+
+.paginatorIconNext {
+    -fx-icon-code: "Material Icons:E5CC";
+}
+
+.paginatorIconPrev {
+    -fx-icon-code: "Material Icons:E5CB";
+}
+
+.paginatorIconEnd {
+    -fx-icon-code: "Material Icons:E5DD";
+}
+
+.paginatorIconStart {
+    -fx-icon-code: "Material Icons:E5DC";
+}
+
+.paginatorIconNavto {
+    -fx-icon-code: "Material Icons:E01F";
+}
+
+.paginatorSpacer {
+    -fx-spacing: 8px;
+}
+
+.paginatorTotalPagesInfo {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0 11px 0 11px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFF;
+    -fx-font-family: "Linux Biolinum Bold";
+}
+
+.iconLevelUp {
+    -fx-icon-size: 32px;
+    -fx-icon-code: "Material Icons:E15E";
+}
+
+.maxHeight {
+    -fx-pref-height: 9999px;
+    -fx-max-height: 9999px;
+    -fx-min-height: 1px;
+}
+
+.maxWidth {
+    -fx-pref-width: 9999px;
+    -fx-max-width: 9999px;
+    -fx-min-width: 1px;
+}
+
+.menuItem {  
+    -fx-font-family: "Share";
+    -fx-font-size: 14px;
+    -fx-padding: 5px 4px 5px 24px;
+    -fx-background-color: #FFF;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+/*    -fx-pref-height: 28px;
+    -fx-min-height: 28px;
+    -fx-max-height: 28px;*/
+}
+
+.menuItem:hover {
+    -fx-background-color: #DDD;
+}
+
+.menuSelectedItem {
+    -fx-border-width: 0 0 0 8px;
+    -fx-border-color: #f77;
+    -fx-padding: 4px 4px 4px 16px;
+    -fx-font-weight:bold;
+}
+
+.menuSeparator {
+    -fx-pref-height: 8px;
+    -fx-min-height: 8px;
+    -fx-max-height: 8px;
+    -fx-background-color: #fff;
+}
+
+.menuHeader {
+    -fx-font-family: "Share";
+    -fx-padding: 4px 4px 4px 8px;
+    -fx-font-weight:bold; 
+    -fx-font-size: 16px;
+    -fx-text-fill: #b00;
+    -fx-pref-height: 32px;
+    -fx-min-height: 32px;
+    -fx-max-height: 32px;
+}
+
+.menuHeaderBlack {
+    -fx-background-color: #fff;
+}
+
+.menuHeaderIcon {
+    -fx-icon-size: 24px;
+    -fx-icon-code: "Material Icons:E8B8";
+    -fx-fill: #b00;
+}
+
+.windowHeader {
+    -fx-background-color: #fff;
+    -fx-pref-height: 48px;
+    -fx-max-height:  48px;
+    -fx-min-height:  48px;
+    -fx-border-width: 0px 0 0px 0;
+    -fx-border-color: #ccc;
+    -fx-padding: 0 0 0 12px;
+}
+
+.windowHeaderLogo {
+    -fx-pref-height: 48px;
+    -fx-max-height:  48px;
+    -fx-min-height:  48px;
+    -fx-pref-width: 200px;
+    -fx-max-width:  200px;
+    -fx-min-width:  200px;
+}
+
+.windowFooter {
+    -fx-background-color: #fff;
+    -fx-pref-height: 24px;
+    -fx-max-height:  24px;
+    -fx-min-height:  24px;
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-color: #CCC;
+}
+
+.windowMenu {
+    -fx-pref-width: 200px;
+    -fx-max-width:  200px;
+    -fx-min-width:  200px;
+    -fx-background-color: #FFF;
+    -fx-border-width: 1px 0 0 0px;
+    -fx-border-color: #ccc;
+}
+
+.windowContentBox {
+    -fx-background-color: #FFF;
+    -fx-border-width: 1px 0 0 0px;
+    -fx-border-color: #ccc;
+}
+
+.topPanelSeparator {
+    -fx-pref-width: 8px;
+    -fx-max-width:  8px;
+    -fx-min-width:  8px;
+}
+
+.topPanelButton {
+    -fx-pref-width: 48px;
+    -fx-max-width: 48px;
+    -fx-min-width: 48px;
+    -fx-pref-height: 48px;
+    -fx-min-height: 48px;
+    -fx-max-height: 48px;
+}
+
+.topPanelButtonIcon {
+    -fx-icon-size: 32px;
+    -fx-fill: #000;
+}
+
+.topPanelButtonIcon:hover {
+    -fx-fill: #b00;
+}
+
+.topPanelButtonMenuIcon {
+    -fx-icon-code: "Material Icons:E1DB";
+}
+
+.popupMenuRoot {
+    
+}
+
+.popupMenuItem {
+    
+}
+
+.popupMenuItemBold {
+    
+}
+
+.iconContainer {
+    -fx-pref-height: 64px;
+    -fx-min-height: 64px;
+    -fx-max-height: 64px;
+    -fx-pref-width: 64px;
+    -fx-max-width: 64px;
+    -fx-min-width: 64px;
+    -fx-alignment:center;
+}
+
+.iconDir01, .iconString01 {
+    -fx-icon-size: 40px;
+    -fx-fill: #000;
+    -fx-alignment:center;
+}
+
+.iconDir01 {
+    -fx-icon-code: "Material Icons:E2C8";
+}
+
+.iconString01 {
+    -fx-icon-code: "Material Icons:E0D8";
+}
+
+.folderElementRoot {
+    -fx-pref-height: 64px;
+    -fx-min-height: 64px;
+    -fx-max-height: 64px;
+    -fx-background-color: #eee;
+    -fx-border-width: 0px 0 1px 0;
+    -fx-border-color: #ccc;
+}
+
+.folderElementRoot:hover {
+    -fx-background-color: #ddd;
+}
+
+.recordsListSpace {
+    -fx-spacing: 0px;
+    -fx-padding: 0px;
+}
+
+.folderElementField {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px 0 0 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.folderElementTitle {
+    -fx-font-family: "Linux Biolinum Bold";
+    -fx-font-size: 18px;
+    -fx-text-fill: #000;
+    -fx-pref-height: 40px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+}
+
+.folderElementText {
+    -fx-font-family: "Linux Biolinum";
+    -fx-font-size: 12px;
+    -fx-text-fill: #555;
+    -fx-pref-height: 24px;
+    -fx-min-height: 24px;
+    -fx-max-height: 24px;
+}
+
+.folderElementSelectedText {
+    -fx-text-fill: #b00;
+}
+
+.folderElementContSel {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px 0 0 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0 16px 0 0;
+}
+
+.folderElementSelected {
+    -fx-border-width: 0 8px 0 0;
+    -fx-border-color: #f77;
+    -fx-padding: 0 8px 0 0;
+}
+
+.StringFieldElementRoot {
+    -fx-pref-height: 64px;
+    -fx-min-height: 64px;
+    -fx-max-height: 64px;
+    -fx-background-color: #eee;
+    -fx-border-width: 0px;
+    -fx-padding: 4px 8px 4px 8px;
+}
+
+.StringFieldElementLabel {
+    -fx-font-family: "Linux Biolinum";
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+    -fx-pref-height: 18px;
+    -fx-min-height: 18px;
+    -fx-max-height: 18px;
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+}
+
+.StringFieldElementText {
+    -fx-font-family: "Linux Biolinum";
+    -fx-font-size: 16px;
+    -fx-text-fill: #000;
+    -fx-pref-height: 30px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+    -fx-background-color: #fff;
+    -fx-border-width: 0px 1px 1px 0;
+    -fx-border-color: #eee;
+}
+
+.LabelElementRoot {
+    -fx-background-color: #eee;
+    -fx-border-width: 0px;
+    -fx-padding: 14px 14px 14px 8px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #000;
+}
+
+.MeWRecordsListAddDirRoot {
+    -fx-background-color: #fff;
+}
+
+.iconSave {
+    -fx-icon-code: "Material Icons:E877";
+}
+
+.iconCancel {
+    -fx-icon-code: "Material Icons:E14C";
+}
+
+.iconAddMore {
+    -fx-icon-code: "Material Icons:E148";
+}
+
+.iconRemoveButton {
+    -fx-icon-code: "Material Icons:E14C";
+    -fx-icon-size: 30px;
+    -fx-fill: #000;
+    -fx-pref-height: 30px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+    -fx-pref-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-width: 30px;
+}
+
+.iconRemoveButton:hover {
+    -fx-fill: #F77;
+}
+
+
+
+.ScrollPane, .ScrollPane:focused, .ScrollPane .corner,  .ScrollPane .viewport {
+    -fx-background-color: #fff;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px 0 0 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.ScrollPane, .ScrollPane:focused {
+    -fx-border-width: 0 0px 0 0px;
+    -fx-border-color:#ddd;
+}
+
+.ScrollPane .scroll-bar:horizontal .track,
+.ScrollPane .scroll-bar:vertical .track {
+    -fx-background-color:#fff;
+    -fx-border-color:#fff;
+    -fx-background-radius: 0em;
+    -fx-border-radius:0em;
+}
+
+.ScrollPane .scroll-bar:horizontal .increment-button ,
+.ScrollPane .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:#fff;
+    -fx-background-radius: 0;
+    -fx-padding:0 0 10 0;
+}
+
+.ScrollPane .scroll-bar:vertical .increment-button ,
+.ScrollPane .scroll-bar:vertical .decrement-button {
+    -fx-background-color:#fff;
+    -fx-background-radius: 0;
+    -fx-padding:0 10 0 0;
+}
+
+.ScrollPane  .scroll-bar .increment-arrow,
+.ScrollPane  .scroll-bar .decrement-arrow {
+    -fx-shape: " ";	
+    -fx-padding:0;
+}
+
+.ScrollPane .scroll-bar:horizontal .thumb,
+.ScrollPane .scroll-bar:vertical .thumb {
+    -fx-background-color:#f77;
+    -fx-background-insets: 0;/* 2 2 2 2, 0, 0;*/
+    -fx-background-radius: 0;
+}
+
+
+.StringFieldElementCombo {
+    -fx-font-family: "Linux Biolinum";
+    -fx-font-size: 14px;
+    -fx-text-fill: #000;
+    -fx-pref-height: 30px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+    -fx-background-color: #fff;
+    -fx-border-width: 0px 1px 1px 0;
+    -fx-border-color: #eee;
+    -fx-min-width: 200px;
+}
+
+.combo-box Pane, ComboBox {
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0px 0 0 0px;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+    -fx-padding: 4px 2px 4px 2px;
+    -fx-cell-size: 30px; 
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #fff;
+    -fx-background-insets: 0;
+}    
+
+.combo-box-popup .list-view .list-cell {
+    -fx-padding: 4px;
+    -fx-background-color: #fff;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #f77;
+    -fx-text-fill: #000;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #f77;
+    -fx-text-fill: #000;
+}
+
+.combo-box-base  {
+    -fx-background-color: #fff;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.combo-box-base:hover{
+    -fx-color: -fx-hover-base;
+}
+
+.combo-box-base:showing {
+    -fx-color: -fx-pressed-base;
+}
+
+.combo-box-base:focused {
+    -fx-background-color: #fff;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}
+

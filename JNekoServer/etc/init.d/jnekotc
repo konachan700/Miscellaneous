@@ -1,0 +1,70 @@
+#! /bin/sh
+# Copyright (c) 1995-2000 SuSE GmbH Nuernberg, Germany.
+#
+# Author: NekoKoneko (Konata Izumi) a@2kx.ru
+#
+### BEGIN INIT INFO
+# Provides: jnekotc
+# Required-Start: $network
+# Required-Stop: $network
+# Default-Start: 3 5
+# Default-Stop: 0 1 2 6
+# Description: jnekocc-tc
+# Short-Description: jnekocc-tc shaper
+### END INIT INFO
+
+. /etc/rc.status
+
+# Shell functions sourced from /etc/rc.status:
+#      rc_check         check and set local and overall rc status
+#      rc_status        check and set local and overall rc status
+#      rc_status -v     ditto but be verbose in local rc status
+#      rc_status -v -r  ditto and clear the local rc status
+#      rc_failed        set local and overall rc status to failed
+#      rc_reset         clear local rc status (overall remains)
+#      rc_exit          exit appropriate to overall rc status
+
+# First reset status of this service
+rc_reset
+
+TCBIN=/usr/sbin/tc
+JNEKOIF=lan1
+
+case "$1" in
+    start)
+	
+	$TCBIN qdisc  del dev $JNEKOIF root
+	$TCBIN qdisc  add dev $JNEKOIF root handle 1:0 htb
+	$TCBIN class  add dev $JNEKOIF parent 1:0 classid 1:1 htb rate 1000mbit ceil 1000mbit burst 512k
+	$TCBIN class  add dev $JNEKOIF parent 1:1 classid 1:10 htb rate 128kbit burst 16k
+	$TCBIN class  add dev $JNEKOIF parent 1:1 classid 1:11 htb rate 1mbit burst 128k
+	$TCBIN filter add dev $JNEKOIF parent 1:0 protocol ip prio 9 handle 1 fw classid 1:10
+	$TCBIN filter add dev $JNEKOIF parent 1:0 protocol ip prio 9 handle 2 fw classid 1:11
+
+	$TCBIN class add dev $JNEKOIF parent 1:1 classid 1:11 htb rate 20000kbit burst 128k
+	$TCBIN class add dev $JNEKOIF parent 1:1 classid 1:12 htb rate 10000kbit burst 128k
+
+	$TCBIN filter add dev $JNEKOIF parent 1:0 protocol ip prio 3 handle 11 fw classid 1:11
+	$TCBIN filter add dev $JNEKOIF parent 1:0 protocol ip prio 3 handle 12 fw classid 1:12
+
+	rc_status -v
+	;;
+    stop)
+	$TCBIN qdisc  del dev $JNEKOIF root
+        rc_status -v
+        ;;
+    try-restart)
+        $0 status >/dev/null &&  $0 restart
+        rc_status
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        rc_status
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|try-restart|restart}"
+        exit 1
+        ;;
+esac
+rc_exit

@@ -1,0 +1,205 @@
+
+
+	//long i=0;
+//stdout = stdout_dbg;
+		//_delay_ms(75);
+		//mt10t7_display_number(i);
+		//__servo_set_value(i);
+		///i++;
+		//if (i >= 0xfffffe) i=1;
+		//__bt_string_transmit(__bt_get_out_buffer());
+		
+		
+		
+		
+		
+		
+		
+		//mt10t7_clear();
+		//mt10t7_display_number(i);
+		//
+		//
+		//i++; if (i > 100) i = 20;
+		//
+		//
+		//servo_set_value(i);
+		//_delay_ms(250);
+		//
+		////string_transmit_rs232("AT\r\n", 0);
+		//string_transmit_rs232("AT+OK\r\n", 3);
+		//
+		//printf("int=%i", i, "; \r\n");
+		
+		
+//	  OCR0A = OCR0A - 1;
+//	  if (OCR0A <= 8) OCR0A = 28;
+	  //string_transmit_rs232("ATE", 0);
+	  //string_transmit_rs232("AT+VERSION", 3);
+	  //
+	  
+				//zval = strtol(dc + 2, NULL, 10);
+				//if (zval > 0) {
+		
+		//
+		//servo_delay_move(16, 11, 12);
+		//servo_delay_move(12, 11, 11);
+		//servo_delay_move(-16, 11, 12);
+		//
+		//servo_delay_move(16, 11, 1);
+		//servo_delay_move(12, 11, 2);
+		//servo_delay_move(-16, 11, 1);
+//
+		//servo_delay_move(-12, 11, 11);
+		//servo_delay_move(-12, 11, 2);
+		
+		//char k = 0;
+		//
+		//servo_select(12);
+		//for (k=0;k<10; k++) {
+			//servo_move(k, SERVO_MOVE_TOP);
+			//_delay_ms(20);
+		//}
+		//
+		//servo_select(11);
+		//for (k=0;k<10; k++) {
+			//servo_move(k, SERVO_MOVE_TOP);
+			//_delay_ms(20);
+		//}			
+		
+		//servo_select(12);
+		//for (k=0;k<10; k++) {
+			//servo_move(k, SERVO_MOVE_TOP);
+			//_delay_ms(10);
+		//}
+					//servo_select(12);
+					//servo_move(9, SERVO_MOVE_TOP);
+					//servo_select(11);
+					//servo_move(9, SERVO_MOVE_TOP);
+					//_delay_ms(150);
+					//servo_select(12);
+					//servo_move(7, SERVO_MOVE_DOWN);
+					//_delay_ms(150);
+					//servo_select(11);
+					//servo_move(5, SERVO_MOVE_DOWN);
+					
+					
+	  
+
+				
+				
+				
+				
+				
+				
+				
+				//for (i=0; i<10; i++) {
+					//servo_step_down(3,  5);
+					//servo_step_down(10, 5);
+				//}
+				//
+				//for (i=0; i<10; i++) {
+					//servo_step_down(7, 5);
+					//servo_step_down(4,  5);
+				//}
+				//
+				//for (i=0; i<10; i++) {
+					//servo_step_up(3,  5);
+					//servo_step_up(10, 5);
+				//}
+				
+				
+				
+				
+				
+				
+				
+				//for (i=0; i<10; i++) {
+					//servo_step_up(11, 5);
+					//servo_step_up(2,  5);
+				//}
+				//
+				//for (i=10; i>0; i--) {
+					//servo_step_down(12, 5);
+					//servo_step_down(1,  5);
+				//}
+				//
+				//for (i=10; i>0; i--) {
+					//servo_step_down(11, 5);
+					//servo_step_down(9,  5);
+					//servo_step_down(7,  5);
+					//servo_step_down(6,  5);
+					//servo_step_down(4,  5);
+					//servo_step_down(2,  5);
+				//}
+				//
+				//
+				//
+				//for (i=0; i<10; i++) {
+					//servo_step_up(10, 5);
+					//servo_step_up(3,  5);
+				//}
+				//for (i=0; i<10; i++) {
+					//servo_step_up(4, 5);
+					//servo_step_up(9,  5);
+				//}
+				//for (i=0; i<10; i++) {
+					//servo_step_down(10, 5);
+					//servo_step_down(3,  5);
+				//}
+				//
+				//
+				//for (i=0; i<10; i++) {
+					//servo_step_up(8, 5);
+					//servo_step_up(5,  5);
+				//}
+				//for (i=0; i<10; i++) {
+					//servo_step_up(7, 5);
+					//servo_step_up(6,  5);
+				//}
+				//for (i=0; i<10; i++) {
+					//servo_step_down(8, 5);
+					//servo_step_down(5,  5);
+				//}
+				
+				//
+				
+				
+				//
+				//for (i=0; i<14; i++) {
+					//servo_step_up(11, 2);
+					//servo_step_up(4, 2);
+					//servo_step_up(7, 2);
+					//servo_step_down(2, 2);
+					//servo_step_down(6, 2);
+					//servo_step_down(9, 2);
+				//}
+				//
+				//
+				//for (i=12; i>0; i--) {
+					//servo_step_down(12, 2);
+					//servo_step_down(3, 2);
+					//servo_step_down(8, 2);
+				//}
+				
+				//for (i=0; i<12; i++) {
+					//servo_step_up(10, 2);
+					//servo_step_up(5, 2);
+					//servo_step_up(1, 2);
+				//}
+				//
+				//
+				//for (i=14; i>0; i--) {
+					//servo_step_down(11, 2);
+					//servo_step_down(4, 2);
+					//servo_step_down(7, 2);
+					//servo_step_up(2, 2);
+					//servo_step_up(6, 2);
+					//servo_step_up(9, 2);
+				//}
+				
+
+
+
+
+
+

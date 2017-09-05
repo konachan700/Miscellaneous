@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:minHeight="64dp"
+        android:minWidth="350dp"
+        android:text="@string/connToCamera"
+        android:textSize="24sp"
+        android:width="350dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/ip1"
+        android:textSize="22sp"
+        android:width="99dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/EditText01"
+        style="android:editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/editText1"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/ip2"
+        android:textSize="22sp"
+        android:width="99dp" />
+
+    <EditText
+        android:id="@+id/EditText02"
+        style="android:editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/EditText01"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/ip3"
+        android:textSize="22sp"
+        android:width="99dp" />
+
+    <EditText
+        android:id="@+id/EditText03"
+        style="android:editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/EditText02"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/ip4"
+        android:textSize="22sp"
+        android:width="99dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/editText1"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:text="@string/ip_addr"
+        android:textSize="24sp"
+        android:width="333dp" />
+
+    <EditText
+        android:id="@+id/EditText04"
+        style="android:editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/defport"
+        android:textSize="22sp"
+        android:width="99dp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/EditText04"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_alignTop="@+id/EditText04"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:text="@string/camport"
+        android:textSize="24sp"
+        android:width="333dp" />
+
+    <EditText
+        android:id="@+id/EditText06"
+        style="android:editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditText04"
+        android:layout_below="@+id/EditText04"
+        android:layout_marginTop="11dp"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/svcport_def"
+        android:textSize="22sp"
+        android:width="99dp" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/EditText06"
+        android:layout_alignRight="@+id/TextView01"
+        android:layout_alignTop="@+id/EditText06"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:text="@string/svcport"
+        android:textSize="24sp"
+        android:width="333dp" />
+
+    <EditText
+        android:id="@+id/EditText05"
+        style="android:editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditText06"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/EditText06"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/color_for_inputs"
+        android:ems="10"
+        android:gravity="left|center_vertical"
+        android:inputType="text"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:text="@string/commline_content"
+        android:textSize="22sp"
+        android:width="70dp" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/EditText05"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/TextView03"
+        android:layout_alignTop="@+id/EditText05"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:text="@string/commline"
+        android:textSize="24sp"
+        android:width="333dp" />
+
+</RelativeLayout>

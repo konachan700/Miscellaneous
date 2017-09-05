@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PCD8544
+	bool "Display-Nokia"
+	help
+	  PCD8544 Nokia 5110/3310 simple display driver for linux. Pure C, good for small linux devices. Ported from Arduino driver, but not support images now (it not needed for me :3).
+
+	  https://github.com/konachan700/PCD8544-linux
